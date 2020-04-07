@@ -1,0 +1,25 @@
+//Create the strSort() method of the MyUtils class to sort a list of stirngs first by length and alphabetically within the same length. 
+//The original list must be unchanged. 
+//For example, for a given list [zz, abc, aa, aaa] you should get [aa, zz, aaa, abc].
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+public class MyUtils {
+     class StringComparator implements Comparator<String> {
+        @Override
+        public int compare(String o1, String o2) {
+            if (o1.length() != o2.length()) {
+                return o1.length() - o2.length();
+            } else {
+                return String.CASE_INSENSITIVE_ORDER.compare(o1, o2);
+            }
+        }
+    }
+    public List<String> strSort(List<String> originList) {
+        List<String> sortedList = new ArrayList<String>(originList);
+        Collections.sort(sortedList, new StringComparator());
+        return sortedList;
+    }
+}
