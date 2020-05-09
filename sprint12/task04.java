@@ -45,7 +45,7 @@ class MyThreads {
                     System.out.println("Thread1 n = " + n);
             }  
            try {
-                    sleep(50);
+                    sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
