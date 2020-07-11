@@ -5,7 +5,7 @@
 //you should get
 //[1, 2, 3]
 
-
+import java.util.stream.Stream;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.Map;
